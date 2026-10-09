@@ -1,1 +1,23 @@
-# Python will be here
+print("=== FOOD & BEVERAGE MENU ===" + chr(13) + "1. Burger - $5.50" + chr(13) + "2. Fries - $2.50" + chr(13) + "3. Soda - $1.50" + chr(13) + "Enter your choice number:")
+choice = int(input())
+if choice == 1:
+    subtotal = 5.5
+else:
+    if choice == 2:
+        subtotal = 2.5
+    else:
+        if choice == 3:
+            subtotal = 1.5
+print("Would you like to leave a tip? (Type Yes or No)")
+hasTip = input()
+if hasTip == "Yes":
+    print("Enter tip amount:")
+    tipAmount = float(input())
+    total = subtotal + tipAmount
+else:
+    tipAmount = 0.0
+    total = subtotal
+print("Your total is $" + str(total) + ". Enter cash payment:")
+cash = float(input())
+change = cash - total
+print("--- ORDER RECEIPT ---" + chr(13) + "Subtotal: $" + str(subtotal) + chr(13) + "Tip: $" + str(tipAmount) + chr(13) + "Total Amount: $" + str(total) + chr(13) + "Cash Given: $" + str(cash) + chr(13) + "Change: $" + str(change))
